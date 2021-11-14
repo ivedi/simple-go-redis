@@ -12,7 +12,7 @@ type SimpleRedisRepository struct{}
 var inMemoryData map[string]string
 var synchronizer *time.Timer
 
-const syncInterval = time.Second * 5000
+const syncInterval = time.Second * 5
 
 const storePath = "./pkg/main/repositories/simpleRedisStore.json"
 
