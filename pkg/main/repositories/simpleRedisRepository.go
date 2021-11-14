@@ -9,7 +9,7 @@ func (S SimpleRedisRepository) Initialize() {
 }
 
 func (S SimpleRedisRepository) Get(key string) string {
-	return string(inMemoryData[key])
+	return "test" //string(inMemoryData[key])
 }
 
 func (S SimpleRedisRepository) Set(key string, value string) {
