@@ -10,7 +10,7 @@ func (S SimpleRedisRepository) Initialize() {
 
 func (S SimpleRedisRepository) Get(key string) string {
 	inMemoryData = make(map[string]string)
-	inMemoryData["test"] = "helloppaasşdklfj543"
+	inMemoryData["test"] = "başka deneem"
 	return inMemoryData["test"] //string(inMemoryData[key])
 }
 
