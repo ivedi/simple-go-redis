@@ -8,6 +8,6 @@ func (S SimpleRedisRepository) Get(key string) string {
 	return InMemoryData[key]
 }
 
-func (S SimpleRedisRepository) Set(key string, value string) string {
+func (S SimpleRedisRepository) Set(key string, value string) {
 	repositories.InMemoryData[key] := value
 }
