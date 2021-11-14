@@ -2,12 +2,12 @@ package repositories
 
 type SimpleRedisRepository struct{}
 
-var InMemoryData map[string]string
+var inMemoryData map[string]string
 
 func (S SimpleRedisRepository) Get(key string) string {
-	return InMemoryData[key]
+	return inMemoryData[key]
 }
 
 func (S SimpleRedisRepository) Set(key string, value string) {
-	repositories.InMemoryData[key] := value
+	inMemoryData[key] := value
 }
