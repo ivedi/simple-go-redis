@@ -4,10 +4,14 @@ type SimpleRedisRepository struct{}
 
 var inMemoryData map[string]string
 
+func (S SimpleRedisRepository) Initialize() {
+	inMemoryData = make(map[string]string)
+}
+
 func (S SimpleRedisRepository) Get(key string) string {
-	return inMemoryData[key]
+	return string(inMemoryData[key])
 }
 
 func (S SimpleRedisRepository) Set(key string, value string) {
-	inMemoryData[key] := value
+	inMemoryData[key] = value
 }
